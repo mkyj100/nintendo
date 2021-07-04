@@ -15,8 +15,6 @@ kill = 0
 fight_set.each do |enemy_grp|
     enemy_grp.each_with_index do |enemy,i|
         enemy = enemy.to_i
-        puts "enemy :" + enemy.to_s
-        puts "i :" + i.to_s
         if enemy > 5
             if ultra[index] == 0
                 if i < enemy_grp.length-1
@@ -26,8 +24,6 @@ fight_set.each do |enemy_grp|
                     break;
                 end
             else 
-                puts "ultra[index]:"+ ultra[index].to_s
-                puts ultra[index].class
                 ultra[index]-=1
                 kill+=enemy
             end
